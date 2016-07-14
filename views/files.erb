@@ -1,0 +1,9 @@
+<table>
+    <% @files.each do |item| %>
+        <tr>
+            <td>
+                <a href="/folders/<%= @folder.name %>/files/<%=item.name%>"><%= item.name %></a>
+            </td>
+        </tr>
+    <% end %>
+</table>

@@ -1,0 +1,18 @@
+<table>
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td><b><%= @file.name %></b></td>
+        </tr>
+        <%  @file.data['__metadata'].merge(@file.data.select{|k,v| k != '__metadata' }).each do |field_name, field_value| %>
+            <tr>
+                <td>
+                    <%= field_name %>
+                </td>
+                <td>
+                    <%= field_value %>
+                </td>
+            </tr>
+        <%  end %>
+    </tbody>
+</table>
