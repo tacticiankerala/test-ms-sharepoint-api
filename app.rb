@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sharepoint-ruby'
 require 'sharepoint-http-auth'
 
+set :bind, '0.0.0.0'
+
 enable :sessions
 
 HOST = 'localhost:8000'
